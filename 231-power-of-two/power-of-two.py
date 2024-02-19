@@ -5,12 +5,6 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        if(n<0):
-            return False
-        high = int(math.ceil(math.sqrt(n)))+1
-        for i in range(high):
-            if 2**i == n:
-                return True
-        return False
+        return n and not (n & n - 1)
                 
         
