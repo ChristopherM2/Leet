@@ -4,7 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        last = nums[0]
+        
         index = 1
         while index!= len(nums):
             if nums[index] == nums[index-1]:
