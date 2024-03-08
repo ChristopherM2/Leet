@@ -7,10 +7,10 @@ class Solution(object):
         last = nums[0]
         index = 1
         while index!= len(nums):
-            if nums[index] == last:
+            if nums[index] == nums[index-1]:
                 nums.pop(index)
             else:
-                last = nums[index]
+                
                 index+=1
 
         
