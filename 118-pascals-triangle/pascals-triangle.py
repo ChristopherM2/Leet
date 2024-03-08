@@ -15,8 +15,11 @@ class Solution:
 
         for i in range(2,n):
             row = [None for _ in range(i+1)]
-            for j in range(0, i+1):
-                row[j] = comb(i, j)
+            row[0] = 1
+            row[-1] = 1
+            # print(out, i+1, i+1-1)
+            for j in range(1, i+1 - 1):
+                row[j] = out[i-1][j] + out[i-1][j-1]
             out[i] = row
 
             
